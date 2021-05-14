@@ -1,0 +1,40 @@
+// 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+
+// 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+
+// 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+// 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+function miFuncion(string) {
+  return string.length;
+}
+let rpta1 = miFuncion("Hola Mundo");
+console.log(rpta1);
+
+TO-FIX:
+function miFuncion2(string, longitudCorte) {
+  return string.split(longitudCorte - 1);   --No retorna lo correcto
+}
+let rpta2 = miFuncion2("Hola Mundo", 4);
+console.log(rpta2);
+
+
+function miFuncion3(string, separator) {
+  return string.split(separator);
+}
+let rpta3 = miFuncion3("hola que tal", " ");
+console.log(rpta3);
+
+
+function miFuncion4(string, repetir) {
+  let nueString = '';
+  let cont = 0;
+  while (cont < repetir) {
+    nueString += `${string} `;
+    cont++;
+  }
+  return nueString;
+}
+let rpta4 = miFuncion4("Hola Mundo", 3);
+console.log(rpta4);
